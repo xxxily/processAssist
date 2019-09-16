@@ -4,6 +4,11 @@
   "main": "bin/processAssist.js",
   "description": "a child process assist for fork",
   "author": "Blaze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxxily/processAssist/issues"
+  },
+  "homepage": "https://github.com/xxxily/processAssist",
   "scripts": {
     "test": "echo test"
   },
