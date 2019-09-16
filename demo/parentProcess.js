@@ -16,3 +16,10 @@ PA.child.run({
 }).then(function (result) {
   console.log(result)
 })
+
+PA.child.run({
+  name: 'libs.promiseTest',
+  // timeout: 1000
+}).then(function (result) {
+  console.log(result)
+})
