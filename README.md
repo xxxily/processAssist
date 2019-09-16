@@ -15,7 +15,7 @@ or
 const ProcessAssist = require('process-assist')
 const PA = new ProcessAssist()
 
-// 已fork的形式初始化子进程
+// 以fork的形式初始化子进程
 PA.fork('./childProcess')
 
 // 调用子进程公开的方法
