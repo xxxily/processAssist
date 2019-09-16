@@ -1,5 +1,5 @@
 {
-  "name": "processAssist",
+  "name": "process-assist",
   "version": "0.0.1",
   "main": "bin/processAssist.js",
   "description": "a child process assist for fork",

@@ -4,15 +4,15 @@
 
 ## 安装
 ``` bash
-# npm i processAssist 
+# npm i process-assist 
 or 
-# yarn add -D processAssist 
+# yarn add -D process-assist 
 ```
 
 ## 使用
 父进程脚本（parentProcess.js）
 ``` javascript
-const ProcessAssist = require('processAssist')
+const ProcessAssist = require('process-assist')
 const PA = new ProcessAssist()
 
 // 已fork的形式初始化子进程
@@ -37,7 +37,7 @@ PA.child.run({
 
 子进程脚本（childProcess.js）
 ``` javascript
-const ProcessAssist = require('../bin/processAssist')
+const ProcessAssist = require('process-assist')
 
 const shareMethod = {
   test (info) {
