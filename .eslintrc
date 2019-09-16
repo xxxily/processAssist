@@ -1,0 +1,23 @@
+{
+  "env": {
+    "mocha": true,
+    "es6": true
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true
+  },
+  "plugins": [
+    "import",
+    "node",
+    "promise",
+    "standard"
+  ],
+  "extends": [
+    "standard"
+  ],
+  "rules": {},
+  "parserOptions": {
+    "ecmaVersion": 10
+  }
+}
