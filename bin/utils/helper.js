@@ -15,6 +15,11 @@ const helper = {
     })
   },
 
+  /* 生成指定范围的随机整数 */
+  random (min, max) {
+    return Math.floor(Math.random() * (max - min)) + min
+  },
+
   /**
    * 根据文本路径获取对象里面的值
    * @param obj {Object} -必选 要操作的对象

@@ -14,4 +14,4 @@ function isArg (obj) {
   return getType(obj) === 'arguments'
 }
 
-module.exports = { getType, isObj, isErr, Arg }
+module.exports = { getType, isObj, isErr, isArg }
