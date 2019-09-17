@@ -5,12 +5,12 @@
 ## 安装
 使用 npm:
 ``` bash
-# npm i process-assist  
+npm i process-assist  
 ```
 
 使用 yarn:
 ``` bash 
-# yarn add process-assist 
+yarn add process-assist 
 ```
 
 ## 使用示例
