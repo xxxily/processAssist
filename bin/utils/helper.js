@@ -24,20 +24,28 @@ const helper = {
    * 根据文本路径获取对象里面的值
    * @param obj {Object} -必选 要操作的对象
    * @param path {String} -必选 路径信息
+   * @param chain {boolean} -可选 返回调用链信息
    * @returns {*}
    */
-  getValByPath (obj, path) {
+  getValByPath (obj, path, chain) {
     path = path || ''
     const pathArr = path.split('.')
+    const callerChain = [obj]
     let result = obj
 
     /* 递归提取结果值 */
     for (let i = 0; i < pathArr.length; i++) {
       if (!result) break
       result = result[pathArr[i]]
+      result && callerChain.push(result)
     }
 
-    return result
+    /* 最后一个值不属于调用链范畴，将其移除 */
+    if (callerChain.length > 1) {
+      callerChain.pop()
+    }
+
+    return chain ? { chain: callerChain, result } : result
   },
 
   /* 判断一个对象是否为Promise对象 */

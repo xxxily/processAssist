@@ -58,7 +58,8 @@ class ProcessAssist {
     const { name } = conf
     let params = conf.params
 
-    const func = utils.getValByPath(this.libs, name)
+    const data = utils.getValByPath(this.libs, name, true)
+    const func = data.result
     const result = {
       conf,
       result: '',
@@ -73,7 +74,7 @@ class ProcessAssist {
           params = [params]
         }
 
-        funcResult = func.apply(null, params)
+        funcResult = func.apply(data.chain.pop(), params)
       } catch (e) {
         result.error = e
       }
