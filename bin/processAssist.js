@@ -165,6 +165,7 @@ class ProcessAssist {
         const result = {
           conf,
           result: '',
+          timeout: false,
           error: false
         }
 
@@ -198,6 +199,7 @@ class ProcessAssist {
           /* 超时限定 */
           if (typeof conf.timeout === 'number') {
             timer = setTimeout(function () {
+              result.timeout = true
               result.error = '运行超时'
 
               /* 模拟触发回调操作，返回超时结果 */
