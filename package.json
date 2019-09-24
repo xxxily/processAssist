@@ -1,6 +1,6 @@
 {
   "name": "process-assist",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "bin/processAssist.js",
   "description": "a child process assist for fork",
   "author": "Blaze",
